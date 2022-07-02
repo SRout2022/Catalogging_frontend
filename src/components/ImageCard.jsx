@@ -21,6 +21,17 @@ function BlankCard()
     )
 }
 
+function BlankCard2()
+{
+    return(
+        <button class="add-prod-card" data-toggle="modal" data-target="#first-pop-Up" style={{display:"flex", justifyContent:"center"}}>
+            {/* <i class="fa-solid fa-plus"></i> */}
+            <img className="add-prod-img" src={plus} alt="Add" style={{marginRight:"45%"}}/>
+        </button>
+        
+    )
+}
+
 export default ImageCard;
 
-export {BlankCard};
+export {BlankCard, BlankCard2};

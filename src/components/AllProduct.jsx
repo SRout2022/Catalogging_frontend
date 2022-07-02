@@ -1,17 +1,16 @@
-import React from "react";
-import {BlankCard} from "./ImageCard";
+import React from 'react'
+import {BlankCard, BlankCard2} from "./ImageCard";
 import ImageCard from "./ImageCard";
 import {Link} from "react-router-dom";
 
-function AllCatlogue()
-{
-    return (
-            <div id="block1" class="image-card">
+function AllProduct() {
+  return (
+    <div id="block1" class="image-card">
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                <Link to="/selecProd">
-                    <BlankCard />
-                </Link>
+                
+                    <BlankCard2/>
+                
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <ImageCard img="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjXW0wSojnT6hugaShJtF5uL3V3QcRdjGDloXewEddZ4-PK5Pvkk6Y8pY9vzEg4E4ph4czZEM40joLUl910grZrWqPIi4gRGOUYZhAkbw&usqp=CAY"/>
@@ -37,7 +36,7 @@ function AllCatlogue()
                 
               </div>
             </div>
-    );
+  )
 }
 
-export default AllCatlogue;
+export default AllProduct

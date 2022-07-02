@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { BlankCard } from "./ImageCard";
 import ImageCard from "./ImageCard";
+import {Link, useNavigate} from "react-router-dom"
+import ReviewCat from "./ReviewCat/ReviewCat";
+import Navbar from "./Navbar";
 
 function SelectProd() {
+
+	const[scr, setScr] = useState(1);
+	let navigate = useNavigate();
+
+	function onContinue()
+	{
+		console.log("OnContinue Entered")
+		navigate("/reviewCat")
+		
+	}
+
 	function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
 
 	// Close the dropdown menu if the user clicks outside of it
+
 	window.onclick = function (event) {
 		if (!event.target.matches(".dropbtn")) {
 			var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -144,9 +159,11 @@ function SelectProd() {
 											</div>
 
 											<div id="cont-btn-div">
-												<button id="modal-continue-btn" data-dismiss="modal">
+											<Link to="/reviewCat">
+												<button id="modal-continue-btn" onClick={onContinue}>
 													Continue
 												</button>
+											</Link>
 											</div>
 										</form>
 									</div>
@@ -209,10 +226,11 @@ function SelectProd() {
 						<a href="#">Availabilty</a>
 					</div>
 				</div> */}
+
 			<div id="block1" class="image-card">
 				<div class="row">
 					<div class="col-lg-4 col-md-6 col-sm-12">
-						<BlankCard />
+						<ImageCard img="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_JgZv_wQlg_eh5CP2eqiij56Si05lA6lpi48g6hOf4fqqcoXkZdwXRLtAE2qJMrj_7vr0J466Cee69nBykDF26UbVYoRZwIgxc2jAtJCycef4A11F1Icsmg&usqp=CAY" />
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-12">
 						<ImageCard img="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjXW0wSojnT6hugaShJtF5uL3V3QcRdjGDloXewEddZ4-PK5Pvkk6Y8pY9vzEg4E4ph4czZEM40joLUl910grZrWqPIi4gRGOUYZhAkbw&usqp=CAY" />
